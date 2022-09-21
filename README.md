@@ -6,4 +6,6 @@ DDL COMMANDS with CONSTRAINTS(primary key,foreign key,unique,check)-(https://git
 ## EXPERIMENT 3
 DML COMMANDS(INSERT,SELECT)-(https://github.com/Lakshan1042/DBMS/blob/main/experiment%203.txt)
 ## EXPERIMENT 4
-DML COMMANDS(UPDATE,DELETE)-(
+DML COMMANDS(UPDATE,DELETE)-(https://github.com/Lakshan1042/DBMS/blob/main/experiment%204.txt)
+## EXPERIMENT 5
+SELECT with various clause(WHERE,PATTERN MATCHING)-(
