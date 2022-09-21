@@ -10,4 +10,4 @@ DML COMMANDS(UPDATE,DELETE)-(https://github.com/Lakshan1042/DBMS/blob/main/exper
 ## EXPERIMENT 5
 SELECT with various clause(WHERE,PATTERN MATCHING)-(https://github.com/Lakshan1042/DBMS/blob/main/ex%3Beriment%205.txt)
 ## EXPERIMENT 6
-SELECT with various clause(BETWEEN,IN,AGGREATE FUNCTION)-( 
+SELECT with various clause(BETWEEN,IN,AGGREATE FUNCTION)-(https://github.com/Lakshan1042/DBMS/blob/main/experiment%206.txt) 
