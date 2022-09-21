@@ -1,0 +1,101 @@
+mysql> create table marks(Sno int(2),Name char(10),M1 int(2),M2 int(2),M3 int(2));
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> desc marks;
++-------+----------+------+-----+---------+-------+
+| Field | Type     | Null | Key | Default | Extra |
++-------+----------+------+-----+---------+-------+
+| Sno   | int(2)   | YES  |     | NULL    |       |
+| Name  | char(10) | YES  |     | NULL    |       |
+| M1    | int(2)   | YES  |     | NULL    |       |
+| M2    | int(2)   | YES  |     | NULL    |       |
+| M3    | int(2)   | YES  |     | NULL    |       |
++-------+----------+------+-----+---------+-------+
+5 rows in set (0.01 sec)
+
+mysql> insert into marks(sno,name,m1,m2,m3)values('1','Ram','68','87','94');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select *from marks;
++------+------+------+------+------+
+| Sno  | Name | M1   | M2   | M3   |
++------+------+------+------+------+
+|    1 | Ram  |   68 |   87 |   94 |
++------+------+------+------+------+
+1 row in set (0.00 sec)
+
+mysql> insert into marks(sno,name,m1,m2,m3)values('2','Ravi','58','81','84');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select*from marks;
++------+------+------+------+------+
+| Sno  | Name | M1   | M2   | M3   |
++------+------+------+------+------+
+|    1 | Ram  |   68 |   87 |   94 |
+|    2 | Ravi |   58 |   81 |   84 |
++------+------+------+------+------+
+2 rows in set (0.01 sec)
+
+mysql> insert into marks(sno,name,m1,m2,m3)values('3','Benju','95','91','93');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select*from marks;
++------+-------+------+------+------+
+| Sno  | Name  | M1   | M2   | M3   |
++------+-------+------+------+------+
+|    1 | Ram   |   68 |   87 |   94 |
+|    2 | Ravi  |   58 |   81 |   84 |
+|    3 | Benju |   95 |   91 |   93 |
++------+-------+------+------+------+
+3 rows in set (0.00 sec)
+
+mysql> select m1 from table;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'table' at line 1
+mysql> select m1 from marks;
++------+
+| m1   |
++------+
+|   68 |
+|   58 |
+|   95 |
++------+
+3 rows in set (0.00 sec)
+
+mysql> select name from marks
+    ->
+    -> ;
++-------+
+| name  |
++-------+
+| Ram   |
+| Ravi  |
+| Benju |
++-------+
+3 rows in set (0.01 sec)
+
+mysql> select row 3 from marks
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '3 from marks' at line 1
+mysql> selct *from marks sno=2;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'selct *from marks sno=2' at line 1
+mysql> select *rom marks sno=2;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'rom marks sno=2' at line 1
+mysql> select *from marks sno=2;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=2' at line 1
+mysql> select *from marks
+    -> where Sno=2;
++------+------+------+------+------+
+| Sno  | Name | M1   | M2   | M3   |
++------+------+------+------+------+
+|    2 | Ravi |   58 |   81 |   84 |
++------+------+------+------+------+
+1 row in set (0.01 sec)
+
+mysql> select *from marks
+    -> where name='benju';
++------+-------+------+------+------+
+| Sno  | Name  | M1   | M2   | M3   |
++------+-------+------+------+------+
+|    3 | Benju |   95 |   91 |   93 |
++------+-------+------+------+------+
+1 row in set (0.00 sec)
